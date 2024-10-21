@@ -1,8 +1,35 @@
 {
-  "name": "QuadTree",
+  "name": "solution-example",
   "uuid": "0a65cc5e-b08f-476d-9abd-0ce987a9f334",
   "version": "3.4.2",
   "creator": {
     "version": "3.8.4"
-  }
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^2.7.2",
+    "@sentry/browser": "^8.11.0",
+    "crypto-es": "^2.1.0",
+    "expr-eval": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./assets/**/*.ts": "eslint"
+  },
+  "scripts": {
+    "eslint": "eslint ./assets/ --ext .ts --fix",
+    "lint-staged": "lint-staged"
+    }
 }

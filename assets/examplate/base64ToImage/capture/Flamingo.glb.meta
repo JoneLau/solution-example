@@ -1,0 +1,134 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "7f24334a-5022-491b-8607-2e9ad3d5a6da",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "bcca5": {
+      "importer": "gltf-mesh",
+      "uuid": "7f24334a-5022-491b-8607-2e9ad3d5a6da@bcca5",
+      "displayName": "",
+      "id": "bcca5",
+      "name": "UnnamedMesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 542
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "afca8": {
+      "importer": "gltf-animation",
+      "uuid": "7f24334a-5022-491b-8607-2e9ad3d5a6da@afca8",
+      "displayName": "",
+      "id": "afca8",
+      "name": "flamingo_flyA_.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.399999976158142
+        },
+        "events": []
+      },
+      "ver": "1.0.17",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    },
+    "f7779": {
+      "importer": "gltf-material",
+      "uuid": "7f24334a-5022-491b-8607-2e9ad3d5a6da@f7779",
+      "displayName": "",
+      "id": "f7779",
+      "name": "UnnamedMaterial.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2202f": {
+      "importer": "gltf-scene",
+      "uuid": "7f24334a-5022-491b-8607-2e9ad3d5a6da@2202f",
+      "displayName": "",
+      "id": "2202f",
+      "name": "Flamingo.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "flamingo_flyA_",
+        "duration": 1.399999976158142,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "flamingo_flyA_",
+            "from": 0,
+            "to": 1.399999976158142,
+            "wrapMode": 2,
+            "previousId": "afca8"
+          }
+        ]
+      }
+    ],
+    "assetFinder": {
+      "meshes": [
+        "7f24334a-5022-491b-8607-2e9ad3d5a6da@bcca5"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "7f24334a-5022-491b-8607-2e9ad3d5a6da@f7779"
+      ],
+      "scenes": [
+        "7f24334a-5022-491b-8607-2e9ad3d5a6da@2202f"
+      ]
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    }
+  }
+}
