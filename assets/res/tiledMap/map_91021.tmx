@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="isometric" renderorder="left-down" width="10" height="10" tilewidth="256" tileheight="128" infinite="0" nextlayerid="8" nextobjectid="1">
+ <editorsettings>
+  <export target="../../../../../garulupeizhi2/product/工具/地图导出工具/map/map_91021.tmj" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="floor_11" tilewidth="257" tileheight="145" tilecount="1" columns="1">
+  <tileoffset x="0" y="15"/>
+  <grid orientation="orthogonal" width="256" height="256"/>
+  <image source="tiledObject/floor/floor_20.png" width="257" height="145"/>
+ </tileset>
+ <tileset firstgid="2" name="cave" tilewidth="256" tileheight="258" tilecount="2" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="1">
+   <properties>
+    <property name="eventId" value="2104"/>
+   </properties>
+   <image width="256" height="258" source="tiledObject/spfloor/spfloor_1.png"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="eventId" value="2106"/>
+   </properties>
+   <image width="256" height="258" source="tiledObject/spfloor/spfloor_1.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="5" name="npc" tilewidth="256" tileheight="256" tilecount="2" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="1">
+   <properties>
+    <property name="eventId" value="18151"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/npc_1803.png"/>
+  </tile>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="18150"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/npc_1803.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="7" name="event" tilewidth="198" tileheight="250" tilecount="6" columns="0">
+  <tileoffset x="40" y="-20"/>
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="1104"/>
+   </properties>
+   <image width="198" height="239" source="tiledObject/decoration_22.png"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="eventId" value="1031"/>
+   </properties>
+   <image width="198" height="241" source="tiledObject/decoration_23.png"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="eventId" value="3011"/>
+   </properties>
+   <image width="152" height="250" source="tiledObject/decoration_24.png"/>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="eventId" value="3012"/>
+   </properties>
+   <image width="152" height="250" source="tiledObject/decoration_25.png"/>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="eventId" value="201"/>
+   </properties>
+   <image width="157" height="143" source="tiledObject/fence_1.png"/>
+  </tile>
+  <tile id="13">
+   <image width="159" height="184" source="tiledObject/facility_11.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="jiaju" tilewidth="215" tileheight="550" tilecount="3" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="6">
+   <properties>
+    <property name="eventId" value="1016"/>
+   </properties>
+   <image width="215" height="168" source="tiledObject/decoration_6.png"/>
+  </tile>
+  <tile id="7">
+   <image width="160" height="550" source="tiledObject/wall/wall_1.png"/>
+  </tile>
+  <tile id="8">
+   <image width="160" height="550" source="tiledObject/wall/wall_2.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="30" name="object_9" tilewidth="240" tileheight="265" tilecount="1" columns="1">
+  <tileoffset x="40" y="-10"/>
+  <grid orientation="orthogonal" width="199" height="266"/>
+  <image source="tiledObject/object_9.png" width="240" height="265"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="2103"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="31" name="water_4" tilewidth="256" tileheight="256" tilecount="1" columns="1">
+  <tileoffset x="0" y="140"/>
+  <image source="tiledObject/floor/water_4.png" width="256" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="1034"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="32" name="boss3" tilewidth="256" tileheight="287" tilecount="1" columns="1">
+  <image source="tiledObject/npc_18092.png" width="256" height="287"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="2232"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="33" name="facility_34" tilewidth="276" tileheight="241" tilecount="1" columns="1">
+  <tileoffset x="100" y="-50"/>
+  <image source="tiledObject/facility_34.png" width="276" height="241"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="219"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="34" name="facility_14" tilewidth="123" tileheight="110" tilecount="1" columns="1">
+  <tileoffset x="70" y="-50"/>
+  <image source="tiledObject/facility_14.png" width="123" height="110"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="201"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="35" name="facility_13" tilewidth="318" tileheight="272" tilecount="1" columns="1">
+  <tileoffset x="100" y="-50"/>
+  <image source="tiledObject/facility_13.png" width="318" height="272"/>
+ </tileset>
+ <tileset firstgid="36" name="fence_1" tilewidth="157" tileheight="143" tilecount="1" columns="1">
+  <tileoffset x="40" y="-40"/>
+  <image source="tiledObject/fence_1.png" width="157" height="143"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="201"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="37" name="object_9_1" tilewidth="240" tileheight="265" tilecount="1" columns="1">
+  <tileoffset x="40" y="-10"/>
+  <grid orientation="orthogonal" width="197" height="265"/>
+  <image source="tiledObject/object_9.png" width="240" height="265"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="2105"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="38" name="floor8" tilewidth="294" tileheight="141" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="294" height="141" source="tiledObject/blank/floor_8.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="39" name="note_2" tilewidth="256" tileheight="256" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="eventId" value="2002"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/note_2.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="40" name="chest" tilewidth="266" tileheight="256" tilecount="26" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="4">
+   <properties>
+    <property name="eventId" value="2801"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="eventId" value="2802"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="eventId" value="2803"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="eventId" value="2804"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="eventId" value="2805"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="eventId" value="2806"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="eventId" value="2807"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="eventId" value="2808"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="eventId" value="2809"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="eventId" value="2810"/>
+   </properties>
+   <image width="266" height="256" source="tiledObject/chest_2.png"/>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="eventId" value="2811"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="eventId" value="2812"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="eventId" value="2813"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="eventId" value="2814"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="eventId" value="2815"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="eventId" value="2816"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="eventId" value="2817"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="eventId" value="2818"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="eventId" value="2819"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="eventId" value="2820"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_4.png"/>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="eventId" value="2821"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="eventId" value="2822"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="eventId" value="2823"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="eventId" value="2824"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="eventId" value="2825"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="eventId" value="2826"/>
+   </properties>
+   <image width="256" height="256" source="tiledObject/chest_5.png"/>
+  </tile>
+ </tileset>
+ <layer id="7" name="blank" width="10" height="10">
+  <data encoding="csv">
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38,
+38,38,38,38,38,38,38,38,38,38
+</data>
+ </layer>
+ <layer id="1" name="floor1" width="10" height="10">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,1,1,1,1,1,1,
+1,1,1,31,31,31,31,31,31,1,
+1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer id="5" name="wall" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="event1" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,2147483684,0,37,0,
+0,33,0,0,0,0,2147483684,0,0,0,
+0,30,0,0,0,0,32,0,0,0,
+0,0,0,0,34,0,19,19,19,19,
+0,0,0,0,0,0,0,0,0,0,
+0,65,0,0,34,0,64,0,0,0,
+19,19,0,0,0,0,0,0,0,0,
+12,0,0,0,0,0,0,0,0,0,
+13,39,0,34,0,34,0,34,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="event2" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,4,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,3,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

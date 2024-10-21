@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="isometric" renderorder="right-down" width="14" height="14" tilewidth="256" tileheight="128" infinite="0" nextlayerid="40" nextobjectid="57">
+ <tileset firstgid="1" name="floor" tilewidth="261" tileheight="155" tilecount="11" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="floor" value="3"/>
+    <property name="func" value="1"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_13.png" width="261" height="140"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="floor" value="3"/>
+    <property name="func" value="2"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_16.png" width="256" height="155"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="floor" value="3"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_17.png" width="257" height="142"/>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="floor" value="4"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_22.png" width="258" height="143"/>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="floor" value="4"/>
+    <property name="func" value="1"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_89.png" width="261" height="140"/>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="floor" value="2"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_90.png" width="261" height="140"/>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="floor" value="2"/>
+    <property name="func" value="2"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_91.png" width="259" height="145"/>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="floor" value="1"/>
+    <property name="func" value="2"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_92.png" width="259" height="145"/>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="floor" value="1"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_6.png" width="259" height="145"/>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="floor" value="4"/>
+    <property name="func" value="3"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_23.png" width="259" height="145"/>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="floor" value="3"/>
+    <property name="func" value="1"/>
+   </properties>
+   <image source="../tiledObject/floor/floor_20.png" width="257" height="145"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="14" name="wall2" tilewidth="154" tileheight="488" tilecount="1" columns="1">
+  <image source="../tiledObject/wall/wall_2.png" width="160" height="550"/>
+ </tileset>
+ <tileset firstgid="15" name="cooktable_3" tilewidth="287" tileheight="418" tilecount="1" columns="1">
+  <grid orientation="orthogonal" width="268" height="326"/>
+  <image source="../tiledTourist/toursitRoomDoor.png" width="287" height="418"/>
+ </tileset>
+ <tileset firstgid="16" name="nextToursit" tilewidth="203" tileheight="233" tilecount="1" columns="1">
+  <grid orientation="orthogonal" width="154" height="474"/>
+  <image source="../tiledTourist/touristRoomUnlock.png" width="203" height="233"/>
+  <tile id="0">
+   <properties>
+    <property name="clickId" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="17" name="fence_2" tilewidth="92" tileheight="144" tilecount="1" columns="1">
+  <tileoffset x="0" y="-30"/>
+  <image source="../tiledObject/fence_2.png" width="92" height="144"/>
+ </tileset>
+ <tileset firstgid="18" name="wall1" tilewidth="154" tileheight="488" tilecount="1" columns="1">
+  <tileoffset x="-16" y="-60"/>
+  <image source="../tiledObject/wall/wall_1.png" width="160" height="550"/>
+ </tileset>
+ <tileset firstgid="19" name="touristEvent_1" tilewidth="340" tileheight="253" tilecount="1" columns="1">
+  <tileoffset x="-20" y="-50"/>
+  <grid orientation="orthogonal" width="73" height="53"/>
+  <image source="../tiledTourist/touristRoomBrand.png" width="340" height="253"/>
+  <tile id="0">
+   <properties>
+    <property name="board" type="int" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="20" name="touristShop_1" tilewidth="250" tileheight="250" tilecount="1" columns="1">
+  <tileoffset x="40" y="60"/>
+  <grid orientation="orthogonal" width="342" height="414"/>
+  <image source="../tiledObject/touristShop/touristShop_11.png" width="250" height="250"/>
+  <tile id="0">
+   <properties>
+    <property name="shopId" value="5"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="21" name="touristShop_2" tilewidth="250" tileheight="250" tilecount="1" columns="1">
+  <tileoffset x="120" y="100"/>
+  <grid orientation="orthogonal" width="258" height="336"/>
+  <image source="../tiledObject/touristShop/touristShop_30.png" width="250" height="250"/>
+  <tile id="0">
+   <properties>
+    <property name="shopId" value="11"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="22" name="touristShop_4" tilewidth="256" tileheight="336" tilecount="1" columns="0">
+  <tileoffset x="0" y="40"/>
+  <image source="../tiledObject/touristShop/touristShop_4.png" width="250" height="250"/>
+  <tile id="0">
+   <properties>
+    <property name="id" value="4"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="23" name="touristEvent_3" tilewidth="203" tileheight="233" tilecount="1" columns="1">
+  <grid orientation="orthogonal" width="150" height="472"/>
+  <image source="../tiledTourist/touristRoomUnlock.png" width="203" height="233"/>
+  <tile id="0">
+   <properties>
+    <property name="previewID" type="int" value="0"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="24" name="bg" tilewidth="2050" tileheight="2343" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../tiledTourist/touristRoomBG.png" width="2050" height="2343"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="25" name="dianti" tilewidth="223" tileheight="1114" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../tiledTourist/touristRoomDianti.png" width="223" height="1114"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="26" name="room" tilewidth="1155" tileheight="1018" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../tiledTourist/toursit_room_1701.png" width="1155" height="1018"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="27" source="../tiledTourist/zhedanglouti.tsx"/>
+ <tileset firstgid="28" name="dack" tilewidth="292" tileheight="289" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../tiledTourist/toursit__image_1701.png" width="292" height="289"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="29" name="walk" tilewidth="294" tileheight="141" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image source="../tiledObject/blank/floor_8.png" width="294" height="141"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="30" source="effect.tsx"/>
+ <tileset firstgid="87" source="effect2.tsx"/>
+ <layer id="2" name="wall" width="14" height="14" offsetx="96" offsety="96">
+  <data encoding="csv">
+14,14,14,14,14,14,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="15" name="wall4" width="14" height="14" offsetx="0" offsety="-224">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="14" name="wall3" width="14" height="14" offsetx="0" offsety="160">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="4" name="decoration" width="14" height="14" offsetx="-32" offsety="160">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="6" name="fence_l" width="14" height="14" offsetx="0" offsety="160">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="10" name="fence_r" width="14" height="14" offsetx="96" offsety="192">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="12" name="obj" offsetx="32" offsety="0">
+  <object id="41" name="animal" x="-64" y="64">
+   <point/>
+  </object>
+  <object id="43" name="board" x="0" y="-192">
+   <point/>
+  </object>
+  <object id="44" name="clmb_3_3" x="416" y="896">
+   <point/>
+  </object>
+  <object id="45" name="clmb_2_3" x="665" y="1195">
+   <point/>
+  </object>
+  <object id="46" name="clmb_3_2" x="869" y="519">
+   <point/>
+  </object>
+  <object id="47" name="clmb_2_2" x="1125" y="735">
+   <point/>
+  </object>
+  <object id="48" name="clmb_2_1" x="1345" y="883">
+   <point/>
+  </object>
+  <object id="51" name="clmb_1_1" x="1717" y="1247">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="19" name="picture" offsetx="32" offsety="0">
+  <object id="38" name="picture_1" x="139.333" y="10">
+   <point/>
+  </object>
+  <object id="39" name="picture_2" x="357.334" y="-2.66663">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="23" name="bg" width="14" height="14" offsetx="-512" offsety="1120">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,24,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="26" name="room" width="14" height="14" offsetx="-96" offsety="256">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,26,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="28" name="twicefloor" width="14" height="14" offsetx="-18" offsety="50">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="27" name="stair" width="14" height="14" offsetx="-18" offsety="182">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="25" name="dianti" width="14" height="14" offsetx="-69.3333" offsety="905.333">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,25,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="38" name="ditan" width="14" height="14">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="wall2" width="14" height="14" offsetx="-608" offsety="-416">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,23,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="20" name="effect" width="14" height="14" offsetx="-96" offsety="-320">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,77,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,87,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="16" name="wall5" width="14" height="14" visible="0" offsetx="272" offsety="-57.3333">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+20,21,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="29" name="zhedang" width="14" height="14" offsetx="406" offsety="254">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,27,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="5" name="board" width="14" height="14" offsetx="224" offsety="-704">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,19,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="30" name="title" width="14" height="14" offsetx="99.3333" offsety="-286.667">
+  <data encoding="csv">
+0,28,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="36" name="floor" width="14" height="14" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,3,3,3,0,0,0,0,0,0,0,0,0,
+0,0,3,3,3,3,2,0,0,0,0,0,0,0,
+0,0,3,3,3,3,3,0,0,0,0,0,0,0,
+0,0,3,3,3,3,3,0,9,8,0,0,0,0,
+0,0,0,2,0,0,0,0,8,9,0,0,0,0,
+0,0,0,0,0,0,0,0,8,8,0,0,0,0,
+0,0,0,0,0,8,8,8,8,8,0,0,0,0,
+0,0,0,0,0,9,8,0,0,0,0,0,12,10,
+0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+0,0,0,0,0,0,0,0,0,11,0,11,0,11,
+0,0,0,0,0,0,0,0,0,11,11,11,11,11
+</data>
+ </layer>
+ <layer id="17" name="walk" width="14" height="14" locked="1">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,29,0,0,29,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,29,0,0,29,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
