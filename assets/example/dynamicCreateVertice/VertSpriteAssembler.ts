@@ -55,7 +55,7 @@ export const VertSpriteAssembler: IAssembler = {
   },
 
   // 局部坐标转世界坐标 照抄的，不用改
-  updateWorldVerts(sprite: VertSprite, chunk: { vb: any }) {
+  updateWorldVerts(sprite: VertSprite, chunk: { vb: Float32Array }) {
     const renderData = sprite.renderData!;
     const vData = chunk.vb;
 
