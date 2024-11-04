@@ -1,7 +1,9 @@
-import { _decorator, Camera, Component, EventTouch, Node, resources, TiledMap, TiledMapAsset, v3, view } from 'cc';
+import { _decorator, Camera, Component, EventTouch, Node, resources, TiledMap, TiledMapAsset, UITransform, v2, v3 } from 'cc';
 import { SCREEN_H, SCREEN_W } from './TileMapCfg';
 import { TileMapLogic } from './TileMapLogic';
 const { ccclass, property } = _decorator;
+
+const temp_vec2 = v2();
 
 @ccclass('TileMapView')
 export class TileMapView extends Component {
@@ -16,11 +18,14 @@ export class TileMapView extends Component {
     mapId = 91011;
 
     private tileMap: TiledMap;
+    private tileUITrans: UITransform;
+    private cameraScale = 1;
 
     onLoad() {
         this.node.on(Node.EventType.TOUCH_END, this.touchEnd, this);
         this.tileMap = this.getComponent(TiledMap);
-        this.mainCamera.orthoHeight = view.getVisibleSize().height;
+        this.tileUITrans = this.node.parent.getComponent(UITransform);
+        this.mainCamera.orthoHeight = this.mainCamera.orthoHeight * this.cameraScale;
     }
 
     start() {
@@ -41,7 +46,16 @@ export class TileMapView extends Component {
             return;
         }
 
-        let wpos = this.mainCamera.screenToWorld(v3(aimPos.x, aimPos.y, 0));
-        let pos = this.mainCamera.convertToUINode(wpos, this.node.parent);
+        let tileSize = this.tileMap.getTileSize();
+        // let wpos = this.mainCamera.screenToWorld(v3(aimPos.x, aimPos.y, 0));
+        let pos = this.tileUITrans.convertToNodeSpaceAR(v3(aimPos.x, aimPos.y, 0));
+        // let posA = this.mainCamera.convertToUINode(v3(aimPos.x, aimPos.y, 0), this.node.parent);
+        // console.log("pos  ", pos, "    posA ", posA);
+        // pos.z = 0;
+        // Vec3.multiplyScalar(pos, pos, this.cameraScale);
+        const str = TileMapLogic.getCellIdByUIPos(pos);
+
+        console.log('touch coordinate', str);
+
     }
 }

@@ -19,9 +19,9 @@ export let tileMapUnionW: number;
 /** 当前地图块/高 */
 export let tileMapUnionH: number;
 /** 当前地图块数量/横 */
-export let tileMapBlockW: number;
+export let tileMapBlockRow: number;
 /** 当前地图块数量/纵 */
-export let tileMapBlockH: number;
+export let tileMapBlockCol: number;
 /** 屏幕可显示地图块数量/横 */
 export let wPiece: number;
 /** 屏幕可显示地图块数量/纵 */
@@ -42,8 +42,8 @@ export function setCurMapSize(mapSize: IMapSize) {
     tileMapHeight = mapSize.mapSizeH;
     tileMapUnionW = mapSize.mapUnionSizeW;
     tileMapUnionH = mapSize.mapUnionSizeH;
-    tileMapBlockW = mapSize.mapBlockW;
-    tileMapBlockH = mapSize.mapBlockH;
+    tileMapBlockRow = mapSize.mapBlockW;
+    tileMapBlockCol = mapSize.mapBlockH;
     wPiece = Math.ceil(SCREEN_W / tileMapUnionW) + 1;
     hPiece = Math.ceil(SCREEN_H / tileMapUnionH) + 1;
 }

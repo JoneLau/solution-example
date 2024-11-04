@@ -1,5 +1,5 @@
 import { TiledMap, UITransform, Vec2, Vec3 } from "cc";
-import { setCurMapSize, tileMapBlockH, tileMapUnionH, tileMapUnionW } from "./TileMapCfg";
+import { setCurMapSize, tileMapBlockCol, tileMapBlockRow, tileMapHeight, tileMapUnionH, tileMapUnionW, tileMapWidth } from "./TileMapCfg";
 import { TiledCell, TileMapMod } from "./TileMapMod";
 
 export class TileMapLogic {
@@ -74,25 +74,51 @@ export class TileMapLogic {
 
     /** 获得格子编号 */
     static getBlockIdxByRowCol(row: number, col: number) {
-        return tileMapBlockH * row + col;
+        return tileMapBlockCol * row + col;
+    }
+
+    /** 获取当前地图斜率 像素高/像素宽 */
+    static slope(): number {
+        return tileMapHeight / tileMapWidth;
+    }
+
+    /** 判断行是否在地图内 */
+    static judgeRow(row: number): boolean {
+        return (row >= 0 && row < tileMapBlockRow);
+    }
+
+    /** 判断列是否在地图内 */
+    static judgeCol(col: number): boolean {
+        return (col >= 0 && col < tileMapBlockCol);
+    }
+
+    /** 获取格子ID根据cell */
+    static getCellIdByRowCol(row: number, col: number): string {
+        return row + "." + col;
     }
 
     static getCellIdByUIPos(pos: Vec3) {
-
+        const rowCol = this.getRawColByPos(pos);
+        if (this.judgeRow(rowCol.row) && this.judgeCol(rowCol.col)) {
+            return this.getCellIdByRowCol(rowCol.row, rowCol.col);
+        }
     }
 
-    /** UI坐标系中的坐标点转换成需要的场景坐标 */
-    static getScreenPos(pos: Vec3) {
-        // const designSize = view.getDesignResolutionSize();
-        // const halfDesignH = designSize.height / 2;
-        // const halfDesignW = designSize.width / 2;
-        // if (!TravelCamera.ins) return null;
-        // const cmrPos = TravelCamera.ins.node.position;
-        // const tIndent = TravelCamera.ins.indentMul;
-        // const rat = HALF_H / halfDesignH;
+    /** 通过坐标获取行列值 地图以左下角为原点
+     * @param pos 当前探索的坐标值
+     * @param return 获取到的行列值
+    */
+    // static getRawColByPos(pos: Vec3) {
+    //     const rawX = pos.x - pos.y / this.slope();
+    //     const rawY = pos.y + pos.x * this.slope();
+    //     const row = Math.ceil(rawX / tileMapUnionW + tileMapBlockRow / 2 - 1);
+    //     const col = Math.ceil(tileMapBlockCol / 2 - rawY / tileMapUnionH - 1);
+    //     return { row, col };
+    // }
 
-        // let posX = (pos.x - halfDesignW) * tIndent + cmrPos.x;
-        // let posY = (pos.y / rat - halfDesignH) * tIndent + cmrPos.y;
-        // return v3(posX, posY);
+    static getRawColByPos(pos: Vec3) {
+        let row = Math.floor((pos.x / tileMapUnionW + tileMapBlockCol - 1 + pos.y / tileMapUnionH) / 2);
+        let col = Math.floor((2 * tileMapBlockRow + tileMapBlockCol - 3 - pos.y / tileMapUnionH - pos.x / tileMapUnionW) / 2);
+        return { row, col };
     }
 }
