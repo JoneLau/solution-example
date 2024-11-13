@@ -1,4 +1,4 @@
-import { TiledMap, UITransform, Vec2, Vec3 } from "cc";
+import { TiledMap, UITransform, v3, Vec2, Vec3 } from "cc";
 import { setCurMapSize, tileMapBlockCol, tileMapBlockRow, tileMapHeight, tileMapUnionH, tileMapUnionW, tileMapWidth } from "./TileMapCfg";
 import { TiledCell, TileMapMod } from "./TileMapMod";
 
@@ -98,7 +98,7 @@ export class TileMapLogic {
     }
 
     static getCellIdByUIPos(pos: Vec3) {
-        const rowCol = this.getRawColByPos(pos);
+        const rowCol = this.getRowColByPos(pos);
         if (this.judgeRow(rowCol.row) && this.judgeCol(rowCol.col)) {
             return this.getCellIdByRowCol(rowCol.row, rowCol.col);
         }
@@ -107,18 +107,48 @@ export class TileMapLogic {
     /** 通过坐标获取行列值 地图以左下角为原点
      * @param pos 当前探索的坐标值
      * @param return 获取到的行列值
-    */
-    // static getRawColByPos(pos: Vec3) {
+     */
+    // static getRowColByPos(pos: Vec3) {
     //     const rawX = pos.x - pos.y / this.slope();
     //     const rawY = pos.y + pos.x * this.slope();
-    //     const row = Math.ceil(rawX / tileMapUnionW + tileMapBlockRow / 2 - 1);
-    //     const col = Math.ceil(tileMapBlockCol / 2 - rawY / tileMapUnionH - 1);
+    //     // const row = Math.ceil(rawX / tileMapUnionW + tileMapBlockRow / 2 - 1);
+    //     // const col = Math.ceil(tileMapBlockCol / 2 - rawY / tileMapUnionH - 1);
+    //     const row = Math.floor(rawX / tileMapUnionW + tileMapBlockRow / 2);
+    //     const col = Math.floor(tileMapBlockCol / 2 - rawY / tileMapUnionH);
+    //     // console.log("看下数据", x, "  ", y, " ", row, "  ", col);
     //     return { row, col };
     // }
 
-    static getRawColByPos(pos: Vec3) {
-        let row = Math.floor((pos.x / tileMapUnionW + tileMapBlockCol - 1 + pos.y / tileMapUnionH) / 2);
-        let col = Math.floor((2 * tileMapBlockRow + tileMapBlockCol - 3 - pos.y / tileMapUnionH - pos.x / tileMapUnionW) / 2);
+    /** 
+     * 触点点击格子
+     * @param pos 触点转换到 tiledmap 坐标系下
+     */
+    static getRowColByPos(pos: Vec3) {
+        //tileMapWidth 地图像素 tileMapBlockCol 地图纵向格子数量
+        //计算公式
+        //x-y
+        //x+y
+        let h = Math.round((pos.x + tileMapWidth / 2) / (tileMapUnionW / 2) - tileMapBlockCol); //x-y
+        let v = Math.round((tileMapHeight / 2 - pos.y) / (tileMapUnionH / 2));//x+y
+        let row = Math.floor((h + v) / 2);
+        let col = Math.floor((v - h) / 2);
         return { row, col };
     }
+
+    /** 格子中心位置计算，tiledmap 坐标系下 */
+    static getPosByRowCol(row: number, col: number) {
+        let rawX = (tileMapBlockCol + row - col) * (tileMapUnionW / 2);
+        let rawY = (tileMapBlockCol + tileMapBlockRow - row - col - 1) * (tileMapUnionH / 2);
+        const travelVec3 = v3(rawX - (tileMapWidth / 2), rawY - (tileMapHeight / 2));
+        return travelVec3;
+    }
+
+    // static getPosByRowCol1(row: number, col: number) {
+    //     let rawX = (row + 0.5 - tileMapBlockRow / 2) * (tileMapUnionW / 2);
+    //     let rawY = (tileMapBlockCol / 2 - col - 0.5) * (tileMapUnionH / 2);
+    //     const travelVec3 = v3();
+    //     travelVec3.x = (rawX + rawY / this.slope());
+    //     travelVec3.y = (rawY - rawX * this.slope());
+    //     return travelVec3;
+    // }
 }

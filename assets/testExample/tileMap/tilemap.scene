@@ -181,9 +181,9 @@
     "_far": 1000,
     "_color": {
       "__type__": "cc.Color",
-      "r": 51,
-      "g": 51,
-      "b": 51,
+      "r": 22,
+      "g": 165,
+      "b": 233,
       "a": 255
     },
     "_depth": 1,
@@ -312,7 +312,7 @@
     "targetFlag": {
       "__id__": 9
     },
-    "mapId": 10001,
+    "mapId": 1001,
     "_id": "89oe9lQPRJspumWUu5LepJ"
   },
   {
