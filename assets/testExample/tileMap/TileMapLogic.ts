@@ -97,6 +97,12 @@ export class TileMapLogic {
         return row + "." + col;
     }
 
+    /** 获取格子行列值根据格子ID */
+    static getRowColById(cellId: string) {
+        const posList = cellId.split(".");
+        return { row: Number(posList[0]), col: Number(posList[1]) };
+    }
+
     static getCellIdByUIPos(pos: Vec3) {
         const rowCol = this.getRowColByPos(pos);
         if (this.judgeRow(rowCol.row) && this.judgeCol(rowCol.col)) {
